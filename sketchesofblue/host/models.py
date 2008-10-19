@@ -29,7 +29,7 @@ class Plan(models.Model):
     """
     host = models.ForeignKey(Company)
     plan_name = models.CharField(max_length=100)
-    yearly_discount_available = models.BooleanField(default=True)
+    yearly_discount_available = models.BooleanField(default=False)
     current_price = models.DecimalField(max_digits=6, decimal_places=2, help_text="What is the price that you are paying.")
     billed_price = models.DecimalField(blank=True, max_digits=6, decimal_places=2, help_text="What is the price that your customer is paying.")
     disk_space = models.CharField(blank=True, max_length=100)

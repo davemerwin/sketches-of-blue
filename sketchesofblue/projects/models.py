@@ -1,4 +1,7 @@
 from django.db import models
+from sketchesofblue.models.customer import Customer
+from sketchesofblue.models.domains import Domain
+from sketchesofblue.models.host import Company, Plan
 
 # Create your models here.
 class Project(models.Model):
@@ -11,3 +14,16 @@ class Project(models.Model):
     
     Import: Customer, Domains, Sub Domains, Hosting Plan and Host
     """
+    project_name = models.CharField(max_length=100)
+    customer = models.ForeignKey(Customer, blank=True, null=True)
+    domains = models.ManyToManyField(Domain)
+    host_company = models.ForeignKey(Company)
+    host_plan = models.ForeignKey(Plan)
+    description = models.TextField(blank=True)
+    
+    class Meta:
+        verbose_name = "Project"
+        verbose_name_plural = "Projects"
+        
+    def __str__(self):
+        return self.name
