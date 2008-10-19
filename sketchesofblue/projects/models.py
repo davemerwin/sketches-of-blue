@@ -1,7 +1,7 @@
 from django.db import models
-from sketchesofblue.models.customer import Customer
-from sketchesofblue.models.domains import Domain
-from sketchesofblue.models.host import Company, Plan
+from sketchesofblue.customer.models import Customer
+from sketchesofblue.domains.models import Domain
+from sketchesofblue.host.models import Company, Plan
 
 # Create your models here.
 class Project(models.Model):
