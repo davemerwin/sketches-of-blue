@@ -1,11 +1,20 @@
-from sketchesofblue.customer.models import Customer
-from sketchesofblue.domains.models import Domain
-from sketchesofblue.host.models import Company, Plan
+from django.conf.urls.defaults import *
+from django.views.generic.list_detail import object_detail, object_list
 from sketchesofblue.projects.models import Project
-from django.shortcuts import render_to_response
-from django.template import Context, Template, RequestContext
-from django.http import Http404, HttpResponseRedirect
-from django.core.urlresolvers import reverse
 
-def project_list(request):
-    project = Project.objects.all()
+project_list = {
+    'queryset': Project.objects.all(),
+    'paginate_by': 25,
+}
+
+project_object = {
+    'queryset': Project.objects.all(),
+    'slug_field': 'slug',
+}
+
+urlpatterns = patterns('',
+    # Project List
+    #url(r'^$', include('sketchesofblue.projects.urls')),
+    
+    url(r'^$', 'django.views.generic.list_detail.object_list', dict(project_list))
+)

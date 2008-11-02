@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table border="0" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th>Project Name</th>
+                <th>Customer</th>
+                <th>Domains</th>
+                <th>Hosting Company</th>
+                <th>Hosting Plan</th>
+                <th>Monthly Fee</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in object_list %}
+                <tr>
+                    <td>{{project.project_name}}</td>
+                    <td>{{project.customer}}</td>
+                    <td>
+                        <ul>
+                            {% for domainList in project.domains.all %}
+                                <li>{{domainList.domain}}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>{{project.host_company}}</td>
+                    <td>{{project.host_plan}}</td>
+                    <td>{{project.host_plan.current_plan}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

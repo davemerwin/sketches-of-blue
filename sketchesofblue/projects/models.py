@@ -20,6 +20,7 @@ class Project(models.Model):
     host_company = models.ForeignKey(Company)
     host_plan = models.ForeignKey(Plan)
     description = models.TextField(blank=True)
+    slug = models.CharField(max_length=100)
     
     class Meta:
         verbose_name = "Project"

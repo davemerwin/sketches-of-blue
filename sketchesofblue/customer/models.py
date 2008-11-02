@@ -9,6 +9,7 @@ class Customer(models.Model):
     contact_email = models.EmailField()
     website = models.URLField(blank=True, verify_exists=True)
     phone = models.CharField(blank=True, max_length=100)
+    slug = models.CharField(max_length=100)
     
     class Meta:
         verbose_name = "Customer"

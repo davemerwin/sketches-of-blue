@@ -1,0 +1,26 @@
+{% load page_tags %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{% block title %}{% endblock %} Blue Channel</title>
+    <meta name="author" content="Dave Merwin">
+    <meta name="keywords" content="TO BE ADDED">
+    <meta name="description" content="TO BE ADDED">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ MEDIA_URL }}css/960.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ MEDIA_URL }}css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ MEDIA_URL }}css/text.css">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ MEDIA_URL }}css/site.css">
+    <link rel="stylesheet" type="text/css" media="print" href="{{ MEDIA_URL }}css/print.css">
+    
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.2.6.min.js"></script>
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/site.settings.js"></script>
+</head>
+<body {% block bodyId %}{% endblock %}>
+</body>
+</html>

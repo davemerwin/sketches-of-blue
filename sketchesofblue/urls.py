@@ -16,6 +16,6 @@ urlpatterns = patterns('',
     (r'^admin/(.*)', admin.site.root),
     
     # Basic Projects
-    url(r'^projects/', include('bluechannel.projects.urls')),
+    url(r'^$', include('sketchesofblue.projects.urls')),
     
 )

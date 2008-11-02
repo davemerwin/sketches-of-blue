@@ -1,8 +1,8 @@
 from django.contrib import admin
 from sketchesofblue.projects.models import Project
 
-class ProjectsAdmin(admin.ModelAdmin):
+class ProjectAdmin(admin.ModelAdmin):
     save_on_top = True
-    prepopulated_fields = {'slug': ('name',)}
+    prepopulated_fields = {'slug': ('project_name',)}
     
-admin.site.register(Projects, ProjectsAdmin)
+admin.site.register(Project, ProjectAdmin)

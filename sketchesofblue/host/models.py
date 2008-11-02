@@ -11,6 +11,7 @@ class Company(models.Model):
     support_email = models.EmailField()
     support_forums = models.URLField(blank=True, verify_exists=True)
     extra_service_notes = models.TextField(blank=True, help_text="What other services does this company provide and what are the fees?")
+    slug = models.CharField(max_length=100)
     
     class Meta:
         verbose_name = ('Company')
@@ -35,6 +36,8 @@ class Plan(models.Model):
     disk_space = models.CharField(blank=True, max_length=100)
     bandwidth = models.CharField(blank=True, max_length=100)
     memory = models.CharField(blank=True, max_length=100)
+    notes = models.TextField(blank=True)
+    slug = models.CharField(max_length=100)
     
     def __str__(self):
         return self.name
