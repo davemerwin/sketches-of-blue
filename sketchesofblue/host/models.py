@@ -6,7 +6,7 @@ class Company(models.Model):
     This is the company that hosts the website. Basic contact information is listed.
     """
     name = models.CharField(max_length=100)
-    description = models.TextField(blank=True)
+    notes = models.TextField(blank=True)
     website = models.URLField(blank=True, verify_exists=True)
     support_email = models.EmailField()
     support_forums = models.URLField(blank=True, verify_exists=True)

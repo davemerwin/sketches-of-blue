@@ -5,7 +5,8 @@ class Customer(models.Model):
     """
     The basic contact information for the customer. This can be expanded quite a bit.
     """
-    name = models.CharField(blank=True, max_length=200)
+    name = models.CharField(max_length=200)
+    notes = models.TextField(blank=True)
     contact_email = models.EmailField()
     website = models.URLField(blank=True, verify_exists=True)
     phone = models.CharField(blank=True, max_length=100)

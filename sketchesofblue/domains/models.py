@@ -8,6 +8,7 @@ class Domain(models.Model):
     domain = models.URLField(verify_exists=True)
     expires = models.DateField()
     original_cost = models.CharField(blank=True, max_length=100)
+    notes = models.TextField(blank=True)
     slug = models.CharField(max_length=100)
     
     class Meta:
