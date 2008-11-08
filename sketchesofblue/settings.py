@@ -1,7 +1,11 @@
 # Django settings for sketchesofblue project.
 
+import os
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+PROJECT_PATH = os.path.abspath(os.path.split(__file__)[0])
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
@@ -77,6 +81,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
+    'django.contrib.admindocs',
     'sketchesofblue.customer',
     'sketchesofblue.domains',
     'sketchesofblue.host',

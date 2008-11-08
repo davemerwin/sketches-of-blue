@@ -16,5 +16,8 @@ urlpatterns = patterns('',
     # Project List
     #url(r'^$', include('sketchesofblue.projects.urls')),
     
+    # For the profiles for users
+    url(r'^(?P<slug>[-\w]+)/$', 'django.views.generic.list_detail.object_detail', dict(project_object)),
+    
     url(r'^$', 'django.views.generic.list_detail.object_list', dict(project_list))
 )

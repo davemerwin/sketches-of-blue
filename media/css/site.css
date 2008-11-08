@@ -11,11 +11,11 @@
 /* End of hack */
 
 p.mir {line-height:0;}
-body {color:#444444; background:#E6E6E6;}
+body {color:#444444; background:#E6E6E6; padding:20px;}
 
 /* =Layout
 ----------------------------------------------------------------------------*/
-
+#projectList {width:100%;}
 
 /* =Typography
 ----------------------------------------------------------------------------*/

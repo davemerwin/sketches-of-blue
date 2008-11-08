@@ -16,4 +16,4 @@ class Domain(models.Model):
         verbose_name_plural = "Domains"
         
     def __str__(self):
-        return self.domain_name
+        return self.domain

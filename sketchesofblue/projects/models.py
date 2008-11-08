@@ -6,7 +6,7 @@ from sketchesofblue.host.models import Company, Plan
 # Create your models here.
 class Project(models.Model):
     """
-    The customer's project. Customers can have many projects. Each project's sett8ings are stored here.
+    The customer's project. Customers can have many projects. Each project's settings are stored here.
     
     In the future it will be nice to have a way to display and protect passwords.
     
@@ -27,4 +27,7 @@ class Project(models.Model):
         verbose_name_plural = "Projects"
         
     def __str__(self):
-        return self.name
+        return self.project_name
+        
+    def get_absolute_url(self):
+        return "/projects/%s/" % self.slug
