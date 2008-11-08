@@ -2,7 +2,12 @@
 
 {% block content %}
     <h1>{{object.project_name}}</h1>
-    <h3>{{object.customer.name}}</h3>
-    <h3>{{object.customer.contact_email}}</h3>
-    {{object.customer.website}}
+    
+    <ul>
+    <li><h3>{{object.customer.name}}</h3></li>
+    <li>{{object.customer.contact_email}}</li>
+    <li>{{object.customer.website|default:"No Website Listed"}}</li>
+    <li>{{object.customer.phone|default:"No Phone Listed"}}</li>
+    </ul>
+    
 {% endblock %}
