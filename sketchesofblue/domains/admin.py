@@ -5,5 +5,6 @@ class DomainAdmin(admin.ModelAdmin):
     save_on_top = True
     list_filter = ('expires',)
     prepopulated_fields = {'slug': ('domain',)}
+    list_display = ('domain', 'expires', 'customer',)
 
 admin.site.register(Domain, DomainAdmin)
