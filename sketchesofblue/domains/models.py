@@ -6,7 +6,7 @@ class Domain(models.Model):
     """
     The domains that we own. When they are due etc.
     """
-    domain = models.URLField(verify_exists=True)
+    domain = models.CharField(max_length=100)
     expires = models.DateField()
     original_cost = models.CharField(blank=True, max_length=100)
     notes = models.TextField(blank=True)
