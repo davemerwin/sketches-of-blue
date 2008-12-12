@@ -17,10 +17,10 @@ urlpatterns = patterns('',
     # (r'^admin/(.*)', admin.site.root),
     
     # Basic Projects
-    url(r'^projects/', include('sketchesofblue.projects.urls')),
+    # url(r'^projects/', include('sketchesofblue.projects.urls')),
     
     # Admin access only for now
-    (r'^$', admin.site.root),
+    (r'^(.*)$', admin.site.root),
     
 )
 

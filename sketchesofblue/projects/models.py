@@ -16,7 +16,7 @@ class Project(models.Model):
     """
     project_name = models.CharField(max_length=100)
     customer = models.ForeignKey(Customer, blank=True, null=True)
-    domains = models.ManyToManyField(Domain)
+    domains = models.ManyToManyField(Domain, blank=True, null=True)
     host_company = models.ForeignKey(Company)
     host_plan = models.ForeignKey(Plan)
     notes = models.TextField(blank=True)
