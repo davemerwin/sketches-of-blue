@@ -14,12 +14,13 @@ urlpatterns = patterns('',
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
      
     # Uncomment the next line to enable the admin:
-    (r'^admin/(.*)', admin.site.root),
-    
-    
+    # (r'^admin/(.*)', admin.site.root),
     
     # Basic Projects
     url(r'^projects/', include('sketchesofblue.projects.urls')),
+    
+    # Admin access only for now
+    (r'^$', admin.site.root),
     
 )
 
